@@ -1,193 +1,273 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
-      <meta http-equiv="refresh" content="content=60" />
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <style type="text/css">
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-        .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-        .fa-anchor,.fa-coffee {font-size:180px}
-        html { height: 100% } 
-        body { height: 75%; margin: 20; padding: 20 }
-         /*BEGINNING OF SLIDER NONSENSE*/
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+    <meta http-equiv="refresh" content="content=60" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
+        
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
+        
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 180px
+        }
+        
+        html {
+            height: 100%
+        }
+        
+        body {
+            height: 75%;
+            margin: 20;
+            padding: 20
+        }
+        /*BEGINNING OF SLIDER NONSENSE*/
+        
         .slidecontainer {
-            width: 100%; /* Width of the outside container */
-         }
-         .slider {
-            -webkit-appearance: none;  /* Override default CSS styles */
+            width: 100%;
+            /* Width of the outside container */
+        }
+        
+        .slider {
+            -webkit-appearance: none;
+            /* Override default CSS styles */
             appearance: none;
-            width: 50%; /* Full-width */
-            height: 10px; /* Specified height */
-            background: #d3d3d3; /* Grey background */
-            outline: none; /* Remove outline */
-            opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-            -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+            width: 50%;
+            /* Full-width */
+            height: 10px;
+            /* Specified height */
+            background: #d3d3d3;
+            /* Grey background */
+            outline: none;
+            /* Remove outline */
+            opacity: 0.7;
+            /* Set transparency (for mouse-over effects on hover) */
+            -webkit-transition: .2s;
+            /* 0.2 seconds transition on hover */
             transition: opacity .2s;
-         }
-         /* Mouse-over effects */
-         .slider:hover {
-            opacity: 1; /* Fully shown on mouse-over */
-         }
-         /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
-         .slider::-webkit-slider-thumb {
-            -webkit-appearance: none; /* Override default look */
+        }
+        /* Mouse-over effects */
+        
+        .slider:hover {
+            opacity: 1;
+            /* Fully shown on mouse-over */
+        }
+        /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            /* Override default look */
             appearance: none;
-            width: 10px; /* Set a specific slider handle width */
-            height: 10px; /* Slider handle height */
-            background: #4CAF50; /* Green background */
-            cursor: pointer; /* Cursor on hover */
-         }
-         .slider::-moz-range-thumb {
-            width: 25px; /* Set a specific slider handle width */
-            height: 25px; /* Slider handle height */
-            background: #4CAF50; /* Green background */
-            cursor: pointer; /* Cursor on hover */
-         }
-         .grid-container-2 {
+            width: 10px;
+            /* Set a specific slider handle width */
+            height: 10px;
+            /* Slider handle height */
+            background: #4CAF50;
+            /* Green background */
+            cursor: pointer;
+            /* Cursor on hover */
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 25px;
+            /* Set a specific slider handle width */
+            height: 25px;
+            /* Slider handle height */
+            background: #4CAF50;
+            /* Green background */
+            cursor: pointer;
+            /* Cursor on hover */
+        }
+        
+        .grid-container-2 {
             display: grid;
-            grid-template-columns: auto auto;
+            width: 65%;
+            margin: auto;
+            grid-template-columns: 50% 50%;
             padding: 2px;
-         }
-         .grid-container-4 {
+            border-color: transparent;
+        }
+        
+        .grid-container-4 {
             display: grid;
-            grid-template-columns: auto auto auto auto;
+            border-radius: 0px;
+            width: 65%;
+            margin: auto;
+            grid-template-columns: 35% 15% 15% 35%;
             padding: 2px;
-         }
-         .grid-item {
-            border: 1px solid rgba(0, 0, 0, 0.8);
+            border-color: transparent;
+        }
+        
+        .grid-item {
+            
             padding: 10px;
             font-size: 15px;
             text-align: center;
-         }
-         .right-align-grid-item {
-            border: 1px solid rgba(0, 0, 0, 0.8);
+        }
+        
+        .right-align-grid-item {
+            
             padding: 10px;
             font-size: 15px;
             text-align: right;
-         }
-         .left-align-grid-item {
-            border: 1px solid rgba(0, 0, 0, 0.8);
+        }
+        
+        .left-align-grid-item {
+            
             padding: 10px;
             font-size: 15px;
             text-align: left;
-         }
+        }
+    </style>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD60d34mCUoQ63hWqsCdZwwa1_Ywhm_4wE&sensor=true"></script>
+    <script type="text/javascript">
+        function myFunction() {
+            var x = document.getElementById("b1");
+            var rem = document.getElementById("remove");
 
-      </style>
-      <script type="text/javascript"
-         src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD60d34mCUoQ63hWqsCdZwwa1_Ywhm_4wE&sensor=true"></script>
-      <script type="text/javascript">
-         function myFunction() {
-          var x = document.getElementById("yo");
-          var y = document.getElementById("hello");
-          var z = document.getElementById("mornin");
-
-         var foodVal = document.getElementById("FoodSlide").value;
-         var famVal = document.getElementById("FamSlide").value;
-         var funVal = document.getElementById("FunSlide").value;
-         var healthVal = document.getElementById("HealthSlide").value;
-          if (y.style.display === "none") {
-            y.style.display = "block";
-            z.style.display = "block";
-            x.innerHTML = "Hide";
-              } else {
-            y.style.display = "none";
-            z.style.display = "none";
-            x.innerHTML = "Show";
-            document.body.style.height = "100%";
+            if (rem.style.display === "none") {
+                rem.style.display = "block";
+                x.innerHTML = "Hide";
+            } else {
+                rem.style.display = "none";
+                x.innerHTML = "Show";
+                document.body.style.height = "100%";
             }
-          }
-         function initialize() {
-           var mapOptions = {
-              center: new google.maps.LatLng(42.09, -85.3),
-              zoom: 9,
-              mapTypeId: google.maps.MapTypeId.ROADMAP
-           };
-           var map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
-         
-           var pinColorR = "FF6666";
-           var pinImageR = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColorR,
-              new google.maps.Size(21, 34),
-              new google.maps.Point(0,0),
-              new google.maps.Point(10, 34));
-         
-           var pinColorG = "66FF66";
-           var pinImageG = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColorG,
-              new google.maps.Size(21, 34),
-              new google.maps.Point(0,0),
-              new google.maps.Point(10, 34));
-         
-           var marker = new google.maps.Marker({
-              position: new google.maps.LatLng(42.293915,-83.713298),icon: pinImageG, map: map });
-         var marker = new google.maps.Marker({position: new google.maps.LatLng(42.29426,-83.712322),icon: pinImageR,map: map });
-         var MyCoordinates = [
-         new google.maps.LatLng(42.293915,-83.713298),
-         new google.maps.LatLng(42.293613,-83.713302),
-         new google.maps.LatLng(42.29402,-83.712052),
-         new google.maps.LatLng(42.294058,-83.711753),
-         new google.maps.LatLng(42.294082,-83.7119),
-         new google.maps.LatLng(42.294262,-83.712572),
-         new google.maps.LatLng(42.294273,-83.712573),
-         new google.maps.LatLng(42.294418,-83.712515),
-         new google.maps.LatLng(42.294458,-83.712427),
-         new google.maps.LatLng(42.294473,-83.712302),
-         new google.maps.LatLng(42.294468,-83.712147),
-         new google.maps.LatLng(42.294467,-83.71214),
-         new google.maps.LatLng(42.29445,-83.712122),
-         new google.maps.LatLng(42.29444,-83.712117),
-         new google.maps.LatLng(42.294373,-83.7123),
-         new google.maps.LatLng(42.294325,-83.712297),
-         new google.maps.LatLng(42.29426,-83.712322)
-         ];
-         var Path = new google.maps.Polyline({
-         path: MyCoordinates,
-         strokeColor: "\#FF5900",
-         strokeOpacity: 1.0,
-         strokeWeight: 3
-         });
-         Path.setMap(map);
-         }
-      </script>
-   </head>
-   <body onload = "initialize()">
-      <header class="w3-container w3-red w3-center" id = "hi" style="padding:12px 16px">
-        <h1 class="w3-margin w3-larger" id = "hello">FIND YOUR NEIGHBORHOOD.</h1>
-        <form id = "mornin" name="search" action="/cgi-bin/test.py" method="get">
-         
-         <!--HELLO THIS IS SOME HECKIN LIT GRID SLIDER STUFF-->
-         <!––Search: <input type="text" name="searchbox">
-         <div class="grid-container-2">
-            <div class="grid-item">About You</div>
-            <div class="grid-item">Your Values</div>
-         </div>
-         <div class="grid-container-4">
-               <div class="grid-item">FORM LABELS</div>
-               <div class="grid-item">FORM INPUTS</div>
-               <div class="right-align-grid-item">Food&Drink<br />Family Life<br />Entertainment<br />Health&Beauty</div>
-               <div class="left-align-grid-item">
-                     <div class="slidecontainer">
-                        <input type="range" min="1" max="5" value="3" class="slider" id="FoodSlide">
-                     </div>
-                     <div class="slidecontainer">
-                        <input type="range" min="1" max="5" value="3" class="slider" id="FamSlide">
-                     </div>
-                     <div class="slidecontainer">
-                        <input type="range" min="1" max="5" value="3" class="slider" id="FunSlide">
-                     </div>
-                     <div class="slidecontainer">
-                        <input type="range" min="1" max="5" value="3" class="slider" id="HealthSlide">
-                     </div>
-               </div>   
-         </div>
+        }
 
-          <input type="submit" value="Submit">
-        </form> 
-        <button class="w3-button w3-red w3-padding-small w3-small w3-margin-top" id = "yo" onclick="myFunction()">Hide</button>
-      </header>
-      <div id = "map_canvas" style = "width:100%; height:100%"></div>
-   </body>
+        function slides() {
+            var foodVal = document.getElementById("FoodSlide").value;
+            var famVal = document.getElementById("FamSlide").value;
+            var funVal = document.getElementById("FunSlide").value;
+            var healthVal = document.getElementById("HealthSlide").value;
+            console.log(foodVal)
+        }
+
+        function initialize() {
+            var mapOptions = {
+                center: new google.maps.LatLng(42.09, -85.3),
+                zoom: 9,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+            var pinColorR = "FF6666";
+            var pinImageR = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColorR,
+                new google.maps.Size(21, 34),
+                new google.maps.Point(0, 0),
+                new google.maps.Point(10, 34));
+
+            var pinColorG = "66FF66";
+            var pinImageG = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColorG,
+                new google.maps.Size(21, 34),
+                new google.maps.Point(0, 0),
+                new google.maps.Point(10, 34));
+
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(42.293915, -83.713298),
+                icon: pinImageG,
+                map: map
+            });
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(42.29426, -83.712322),
+                icon: pinImageR,
+                map: map
+            });
+            var MyCoordinates = [
+                new google.maps.LatLng(42.293915, -83.713298),
+                new google.maps.LatLng(42.293613, -83.713302),
+                new google.maps.LatLng(42.29402, -83.712052),
+                new google.maps.LatLng(42.294058, -83.711753),
+                new google.maps.LatLng(42.294082, -83.7119),
+                new google.maps.LatLng(42.294262, -83.712572),
+                new google.maps.LatLng(42.294273, -83.712573),
+                new google.maps.LatLng(42.294418, -83.712515),
+                new google.maps.LatLng(42.294458, -83.712427),
+                new google.maps.LatLng(42.294473, -83.712302),
+                new google.maps.LatLng(42.294468, -83.712147),
+                new google.maps.LatLng(42.294467, -83.71214),
+                new google.maps.LatLng(42.29445, -83.712122),
+                new google.maps.LatLng(42.29444, -83.712117),
+                new google.maps.LatLng(42.294373, -83.7123),
+                new google.maps.LatLng(42.294325, -83.712297),
+                new google.maps.LatLng(42.29426, -83.712322)
+            ];
+            var Path = new google.maps.Polyline({
+                path: MyCoordinates,
+                strokeColor: "\#FF5900",
+                strokeOpacity: 1.0,
+                strokeWeight: 3
+            });
+            Path.setMap(map);
+        }
+    </script>
+</head>
+
+<body onload="initialize()">
+    <header class="w3-container w3-red w3-center" id="hi" style="padding:12px 16px">
+        <h1 class="w3-margin w3-larger" id="hello">FIND YOUR NEIGHBORHOOD.</h1>
+
+        <!--HELLO THIS IS SOME HECKIN LIT GRID SLIDER STUFF-->
+        <div id="remove">
+            <div class="grid-container-2" id="grid1">
+                <div class="grid-item">About You</div>
+                <div class="grid-item">Your Values</div>
+            </div>
+            <div class="grid-container-4" id="grid2">
+                <div class="grid-item">FORM LABELS</div>
+                <div class="grid-item">FORM INPUTS
+                    <form id="form1">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+
+                <div class="right-align-grid-item">Food&Drink
+                    <br />Family Life
+                    <br />Entertainment
+                    <br />Health&Beauty</div>
+                <div class="left-align-grid-item">
+                    <form id="form2">
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="5" value="3" class="slider" id="FoodSlide">
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="5" value="3" class="slider" id="FamSlide">
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="5" value="3" class="slider" id="FunSlide">
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="5" value="3" class="slider" id="HealthSlide">
+                        </div>
+                        <br>
+                        <input type="submit" value="Submit" onclick="slides()">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <button class="w3-button w3-red w3-padding-small w3-small w3-margin-top" id="b1" onclick="myFunction()">Hide</button>
+    </header>
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+</body>
+
 </html>
